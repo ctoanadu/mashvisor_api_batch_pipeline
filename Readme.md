@@ -15,18 +15,21 @@ This data engineering project showcases an advanced event-driven microservices a
 - Scheduled CloudWatch events trigger the Lambda function periodically.
 - Upon invocation, the function sends API requests to fetch Airbnb property data from the 100 selected cities.
 - The extracted data is stored in an S3 bucket, triggering the next microservice.
+![ingestion](images/data_ingestion.png)
 
 ### Data Transformation Microservice (Event-Driven Lambda Function):
 - Another Lambda function, triggered by S3 events, handles data transformation.
 - As soon as new data is uploaded to the S3 bucket, the Lambda function automatically starts executing.
 - It reads the data, applies necessary transformations, and converts it into the desired analysis-ready CSV format.
 - The transformed data is saved to a different S3 bucket, initiating the final microservice.
+![transformation](images/data_transformation.png)
 
 ### Data Loading Microservice (Event-Driven Lambda Function):
 - An event-driven Lambda function for data loading into AWS Redshift.
 - S3 events trigger the function once new transformed data arrives in the designated S3 bucket.
 - The Lambda function efficiently loads the data into an AWS Redshift database using a COPY command.
 - AWS Redshift then stores the data for further analysis and reporting.
+![redshift](images/data_to_redshift.png)
 
 ### Error Handling and Notifications:
 - The microservices architecture integrates an SNS topic for error handling.
