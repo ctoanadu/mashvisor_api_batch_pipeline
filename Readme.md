@@ -2,7 +2,7 @@
 This project presents a **sophisticated event-driven microservices architecture** on AWS to conduct Airbnb property analysis. Leveraging AWS Lambda functions, S3, AWS Redshift, CloudWatch, and SNS, the pipeline seamlessly extracts, transforms, and loads data from the Mashvisor API into an AWS Redshift database. Event-driven triggers ensure data processing efficiency, while SNS notifications promptly alert stakeholders in case of any failures.
 
 ## Project Overview
-This data engineering project showcases an advanced event-driven microservices architecture to analyze Airbnb property data for 100 cities in California using the Mashvisor API. The architecture comprises several loosely-coupled microservices that react to events and execute specific tasks, ensuring modularity, scalability, and efficient data processing.
+This data engineering project showcases an advanced event-driven microservices architecture to analyze Airbnb property data for 139 cities in California using the Mashvisor API. The architecture comprises several loosely-coupled microservices that react to events and execute specific tasks, ensuring modularity, scalability, and efficient data processing.
 
 ## Architecture
 ![Architecture](images/architecture.png)
