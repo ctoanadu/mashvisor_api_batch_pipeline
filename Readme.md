@@ -4,6 +4,10 @@ This project presents a **sophisticated event-driven microservices architecture*
 ## Project Overview
 This data engineering project showcases an advanced event-driven microservices architecture to analyze Airbnb property data for 100 cities in California using the Mashvisor API. The architecture comprises several loosely-coupled microservices that react to events and execute specific tasks, ensuring modularity, scalability, and efficient data processing.
 
+## Architecture
+![Architecture](images/architecture.png)
+
+
 ## Main Components
 
 ### Data Extraction Microservice (Event-Driven Lambda Function):
@@ -15,7 +19,7 @@ This data engineering project showcases an advanced event-driven microservices a
 ### Data Transformation Microservice (Event-Driven Lambda Function):
 - Another Lambda function, triggered by S3 events, handles data transformation.
 - As soon as new data is uploaded to the S3 bucket, the Lambda function automatically starts executing.
-- It reads the data, applies necessary transformations, and converts it into the desired analysis-ready format.
+- It reads the data, applies necessary transformations, and converts it into the desired analysis-ready CSV format.
 - The transformed data is saved to a different S3 bucket, initiating the final microservice.
 
 ### Data Loading Microservice (Event-Driven Lambda Function):
