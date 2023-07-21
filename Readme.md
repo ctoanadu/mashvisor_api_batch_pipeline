@@ -22,7 +22,7 @@ This data engineering project showcases an advanced event-driven microservices a
 - As soon as new data is uploaded to the S3 bucket, the Lambda function automatically starts executing.
 - It reads the data, applies necessary transformations, and converts it into the desired analysis-ready CSV format.
 - The transformed data is saved to a different S3 bucket, initiating the final microservice.
-![transformation](images/data_transformation.png)
+![transformation](images/data_transf.png)
 
 ### Data Loading Microservice (Event-Driven Lambda Function):
 - An event-driven Lambda function for data loading into AWS Redshift.
