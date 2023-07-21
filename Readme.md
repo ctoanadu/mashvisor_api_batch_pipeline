@@ -13,7 +13,7 @@ This data engineering project showcases an advanced event-driven microservices a
 ### Data Extraction Microservice (Event-Driven Lambda Function):
 - An event-driven AWS Lambda function performs data extraction from the Mashvisor API.
 - Scheduled CloudWatch events trigger the Lambda function periodically.
-- Upon invocation, the function sends API requests to fetch Airbnb property data from the 100 selected cities.
+- Upon invocation, the function sends API requests to fetch Airbnb property data from the 100 selected cities in Carlifornia.
 - The extracted data is stored in an S3 bucket, triggering the next microservice.
 ![ingestion](images/data_ingestion.png)
 
